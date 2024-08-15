@@ -23,5 +23,5 @@ void setup(){
 
 void loop(){
     lv_timer_handler(); // let the GUI do its work
-    gfx->flush(); //Run it when #define CANVAS in displaySetup
+    gfx->flush(); //Run it when #define CANVAS in displaySetup.h
 }
