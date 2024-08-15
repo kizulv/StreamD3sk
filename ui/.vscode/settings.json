@@ -1,0 +1,12 @@
+{
+    "cmake.sourceDirectory": "/Users/kizu/Documents/Arduino/ui/src",
+    "files.associations": {
+        "*.json.liquid": "json",
+        "*.yaml.liquid": "yaml",
+        "*.md.liquid": "markdown",
+        "*.js.liquid": "liquid-javascript",
+        "*.css.liquid": "liquid-css",
+        "*.scss.liquid": "liquid-scss",
+        "ui.h": "c"
+    }
+}
