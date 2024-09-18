@@ -66,10 +66,14 @@ void ui_Sleep_screen_init(void);
 extern lv_obj_t *ui_Sleep;
 void ui_event_Button11( lv_event_t * e);
 extern lv_obj_t *ui_Button11;
-extern lv_obj_t *ui_Label10;
+extern lv_obj_t *ui_Image2;
+void ui_event_Button15( lv_event_t * e);
+extern lv_obj_t *ui_Button15;
+extern lv_obj_t *ui_Label13;
 extern lv_obj_t *ui____initial_actions0;
 
 LV_IMG_DECLARE( ui_img_siri_png);   // assets/siri.png
+LV_IMG_DECLARE( ui_img_snboi_2_png);   // assets/SNBoi_2.png
 
 
 

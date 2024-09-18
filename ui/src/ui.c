@@ -52,8 +52,12 @@ void ui_Sleep_screen_init(void);
 lv_obj_t *ui_Sleep;
 void ui_event_Button11( lv_event_t * e);
 lv_obj_t *ui_Button11;
-lv_obj_t *ui_Label10;
+lv_obj_t *ui_Image2;
+void ui_event_Button15( lv_event_t * e);
+lv_obj_t *ui_Button15;
+lv_obj_t *ui_Label13;
 lv_obj_t *ui____initial_actions0;
+const lv_img_dsc_t *ui_imgset_snboi_[1] = {&ui_img_snboi_2_png};
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
 #if LV_COLOR_DEPTH != 16
@@ -82,6 +86,7 @@ void ui_event_Button3( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
 if ( event_code == LV_EVENT_CLICKED) {
       btn_sleep_test( e );
+      _ui_screen_change( &ui_Sleep, LV_SCR_LOAD_ANIM_NONE, 0, 200, &ui_Sleep_screen_init);
 }
 }
 void ui_event_Button4( lv_event_t * e) {
@@ -137,6 +142,12 @@ void ui_event_Button11( lv_event_t * e) {
 if ( event_code == LV_EVENT_CLICKED) {
       btn_wakeUp( e );
       _ui_screen_change( &ui_Home, LV_SCR_LOAD_ANIM_NONE, 0, 200, &ui_Home_screen_init);
+}
+}
+void ui_event_Button15( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
+if ( event_code == LV_EVENT_CLICKED) {
+      _ui_screen_change( &ui_Home, LV_SCR_LOAD_ANIM_NONE, 0, 0, &ui_Home_screen_init);
 }
 }
 

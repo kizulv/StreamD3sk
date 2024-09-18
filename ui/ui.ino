@@ -13,15 +13,29 @@
 
 USBHIDKeyboard Keyboard;
 
+unsigned long timeStartCountToSleep; 
+int timeToSleep = 1800000; //Time in ms to Sleep Screen
+
 void setup(){
     Serial.begin(115200);
     Keyboard.begin();
     USB.begin();
     f_SetupDisplay();
-    ui_init();
+    ui_init();     
+
+    timeStartCountToSleep = millis(); //Time when Code run;
 }
 
 void loop(){
     lv_timer_handler(); // let the GUI do its work
-    gfx->flush(); //Run it when #define CANVAS in displaySetup.h
+    gfx->flush(); //Run it when #define CANVAS in displaySetup
+
+    // Goto Sleep Screen after X time
+    if ( (unsigned long) (millis() - timeStartCountToSleep) >= timeToSleep ) {
+
+        timeStartCountToSleep = millis(); //ReUpdate timeStartCountToSleep
+        lv_disp_load_scr(ui_Sleep); //Call SleepScreen 'ui_Sleep'
+        
+    }
+    
 }

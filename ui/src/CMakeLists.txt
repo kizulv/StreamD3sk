@@ -4,6 +4,7 @@ SET(SOURCES screens/ui_Home.c
     components/ui_comp_hook.c
     ui_helpers.c
     ui_events.cpp
-    images/ui_img_siri_png.c)
+    images/ui_img_siri_png.c
+    images/ui_img_snboi_2_png.c)
 
 add_library(ui ${SOURCES})
